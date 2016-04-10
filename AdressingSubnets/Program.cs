@@ -32,6 +32,19 @@ namespace AdressingSubnets
 
             foreach (var s in subnets)
             {
+                if(s.hosts <= 2)
+					s.mascara = 252;
+				if(s.hosts <= 6 && s.mascara > 2)
+					s.mascara = 248;
+				if(s.hosts <= 14 && s.mascara > 6)
+					s.mascara = 240;
+				if(s.hosts <= 30 && s.mascara > 14)
+					s.mascara = 224;
+				if(s.hosts <= 62 && s.mascara > 30)
+					s.mascara = 192;
+				if(s.hosts <= 126 && s.mascara > 62)
+					s.mascara = 128;
+            
                 Console.WriteLine("| Número | " + s.numero + " |\n"
                                 + "| Hosts  | " + s.hosts + " |\n"
                                 + "| Mascara| " + "\n"
