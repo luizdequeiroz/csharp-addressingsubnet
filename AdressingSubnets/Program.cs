@@ -23,7 +23,7 @@ namespace AddressingSubnets
 
             Console.WriteLine("--------- Bem Vindo ao AddressingSubnets ---------");
             Console.WriteLine("---------------- Máscaras Classe C ---------------");
-            Console.WriteLine("---------- Por Luiz de Queiroz-11200878 ----------\n");
+            Console.WriteLine("--------- Por Luiz de Queiroz - 11200878 ---------\n");
 
             Console.WriteLine("INFORME OS VALORES SOLICITADOS ABAIXO!");
 
