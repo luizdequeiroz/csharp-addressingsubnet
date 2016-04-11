@@ -1,0 +1,6 @@
+C:\Repos\AddressingSubnets\AdressingSubnets\bin\Debug\AdressingSubnets.exe.config
+C:\Repos\AddressingSubnets\AdressingSubnets\bin\Debug\AdressingSubnets.exe
+C:\Repos\AddressingSubnets\AdressingSubnets\bin\Debug\AdressingSubnets.pdb
+C:\Repos\AddressingSubnets\AdressingSubnets\obj\Debug\AdressingSubnets.exe
+C:\Repos\AddressingSubnets\AdressingSubnets\obj\Debug\AdressingSubnets.pdb
+C:\Repos\AddressingSubnets\AdressingSubnets\obj\Debug\AddressingSubnets.csprojResolveAssemblyReference.cache
