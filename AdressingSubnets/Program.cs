@@ -17,7 +17,7 @@ namespace AddressingSubnets
             Console.ForegroundColor = ConsoleColor.Green;
 
             List<Subnet> subnets = new List<Subnet>();
-            int nSubnets = 0, nHosts = 0, ponto = 0;
+            int nSubnets = 0, nHosts = 0;
             string ipPadrao;
             bool valido = false;
 
