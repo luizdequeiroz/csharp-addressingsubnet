@@ -41,11 +41,12 @@ namespace AddressingSubnets
 
             do
             {
+                if (!valido) Console.WriteLine("O número de sub-redes excede ao valor máximo!");
                 Console.Write("\nInforme o número de sub-redes: ");
                 try
                 {
                     nSubnets = Convert.ToInt32(Console.ReadLine());
-                    valido = true;
+                    valido = (nSubnets > 128) ? false : true;
                 }
                 catch (FormatException)
                 {
@@ -78,21 +79,11 @@ namespace AddressingSubnets
                 } while (!valido);
             }
 
-            foreach (var s in subnets)
-            {
-                if (s.hosts <= 2)
-                    s.mascara = 252;
-                if (s.hosts <= 6 && s.hosts > 2)
-                    s.mascara = 248;
-                if (s.hosts <= 14 && s.hosts > 6)
-                    s.mascara = 240;
-                if (s.hosts <= 30 && s.hosts > 14)
-                    s.mascara = 224;
-                if (s.hosts <= 62 && s.hosts > 30)
-                    s.mascara = 192;
-                if (s.hosts <= 126 && s.hosts > 62)
-                    s.mascara = 128;
-            }
+            foreach (var s in subnets) s.mascara = (s.hosts <= 2) ? 252
+                    : (s.hosts <= 6 && s.hosts > 2) ? 248
+                    : (s.hosts <= 14 && s.hosts > 6) ? 240
+                    : (s.hosts <= 30 && s.hosts > 14) ? 224
+                    : (s.hosts <= 62 && s.hosts > 30) ? 192 : 128;
 
             subnets = subnets.OrderByDescending(s => s.hosts).ToList();
 
@@ -126,7 +117,6 @@ namespace AddressingSubnets
                 Console.WriteLine();
                 Main(null);
             }
-                
         }
     }
 }
